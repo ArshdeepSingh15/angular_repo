@@ -1,0 +1,33 @@
+<div class="user-list-container">
+  <h2>User List</h2>
+
+  @if (userService.loading()) {
+    <div class="loading">Loading...</div>
+  }
+
+  @if (userService.error()) {
+    <div class="error">
+      {{ userService.error() }}
+    </div>
+  }
+
+  @if (userService.users().length > 0) {
+    <table class="user-table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        @for (user of userService.users(); let i = $index; track user.id) {
+          <tr>
+            <td>{{ user.name }}</td>
+            <td>{{ user.email }}</td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  }
+</div>

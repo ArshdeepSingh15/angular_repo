@@ -1,0 +1,19 @@
+<div class="main">
+<h1>Student Dashboard</h1>
+<p>Active Students: {{ activeCount() }}</p>
+
+<app-student-form (save)="addStudent($event)">
+<h2>Add New Student</h2>
+</app-student-form>
+
+<hr />
+
+<h2>Student List</h2>
+<div class="grid">
+@for (student of students(); track student.id) {
+<app-student-card [student]="student">
+<span> Status Badge</span>
+</app-student-card>
+}
+</div>
+</div>

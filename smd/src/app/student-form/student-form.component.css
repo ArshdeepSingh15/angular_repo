@@ -1,0 +1,26 @@
+:host {
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 30px;
+  font-family: Arial, sans-serif;
+  background: #b1f9cb;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+input,
+select {
+  display: block;
+  width: 40%;
+  margin-bottom: 8px;
+  padding: 6px;
+}
+
+button {
+  padding: 6px 12px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #f0f0f0;
+}

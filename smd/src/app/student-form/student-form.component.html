@@ -1,0 +1,11 @@
+<ng-content></ng-content>
+<input #nameInput [(ngModel)]="name" placeholder="Student's Name" />
+<br>
+<input [(ngModel)]="grade" placeholder="Grade" />
+<br>
+<select [(ngModel)]="status">
+  <option value="active">Active</option>
+  <option value="inactive">Inactive</option>
+</select>
+<br>
+<button (click)="submit()">Add Student</button>

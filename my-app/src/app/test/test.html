@@ -1,0 +1,19 @@
+<div class="container">
+@if (isLoggedIn()) {
+<p>Welcome back, {{ user().name}} !</p>
+}
+
+@defer (on timer(5000)) {
+<ul>
+@for (item of items(); track item.id) {
+<li>{{ item.title }}</li>
+}
+</ul>
+} @placeholder { <p>Loading list</p> }
+<input 
+[(ngModel)]="user().name" 
+placeholder="Enter your name"
+/>
+&nbsp;&nbsp;&nbsp;&nbsp;
+<button (click)="resetName()">Reset Name</button>
+</div>

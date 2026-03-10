@@ -1,0 +1,14 @@
+<div class="card" [class.inactive]="student.status === 'inactive'">
+<h3>{{ student.name }}</h3>
+<p>Grade: {{ student.grade }}</p>
+
+@switch (student.status) {
+@case ('active') {
+<span class="active">Active</span>
+}
+@case ('inactive') {
+<span class="inactive">Inactive</span>
+}
+}
+<ng-content></ng-content>
+</div>
