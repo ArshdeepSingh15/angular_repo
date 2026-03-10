@@ -1,0 +1,18 @@
+<nav class="navbar">
+  <div class="nav-container">
+    <h1 class="nav-title">
+      <a routerLink="/" routerLinkActive="active">{{ title() }}</a>
+    </h1>
+    <ul class="nav-links">
+      <li>
+        <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<h1>{{ text() }}</h1>
+<main class="main-content">
+  <router-outlet></router-outlet>
+  <app-user-list-view></app-user-list-view>
+</main>
+ 

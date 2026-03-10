@@ -1,0 +1,29 @@
+<div class="user-list-container">
+  <h2>User List</h2>
+ 
+  @if (loading()) {
+    <div class="loading">Loading...</div>
+  }
+  @if (error()) {
+    <div class="error">{{ error() }}</div>
+  }
+  @if (users().length > 0) {
+    <table class="user-table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (user of users(); track user.id) {
+          <tr>
+            <td>{{ user.name }}</td>
+            <td>{{ user.email }}</td>
+            <td><button type="button" [routerLink]="['/user', user.id]">Open</button></td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  }
+</div>

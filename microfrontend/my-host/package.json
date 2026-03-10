@@ -1,0 +1,54 @@
+{
+  "name": "my-host",
+  "version": "0.0.0",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test",
+    "run:all": "node node_modules/@angular-architects/module-federation/src/server/mf-dev-server.js",
+    "start:bff": "npm run start --workspace bff",
+    "build:bff": "npm run build --workspace bff",
+    "start:all": "npm start & npm run start:bff"
+  },
+  "prettier": {
+    "printWidth": 100,
+    "singleQuote": true,
+    "overrides": [
+      {
+        "files": "*.html",
+        "options": {
+          "parser": "angular"
+        }
+      }
+    ]
+  },
+  "private": true,
+  "workspaces":[ "bff" ],
+  "packageManager": "npm@10.9.4",
+  "dependencies": {
+    "@angular-architects/module-federation": "^20.0.0",
+    "@angular/common": "^21.0.0",
+    "@angular/compiler": "^21.0.0",
+    "@angular/core": "^21.0.0",
+    "@angular/forms": "^21.0.0",
+    "@angular/platform-browser": "^21.0.0",
+    "@angular/router": "^21.0.0",
+    "rxjs": "~7.8.0",
+    "tslib": "^2.3.0"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^21.0.4",
+    "@angular/build": "^21.0.4",
+    "@angular/cli": "^21.0.4",
+    "@angular/compiler-cli": "^21.0.0",
+    "@nestjs/cli": "^11.0.14",
+    "jsdom": "^27.1.0",
+    "ngx-build-plus": "^20.0.0",
+    "typescript": "~5.9.2",
+    "vitest": "^4.0.8",
+    "@types/node": "^22.10.7",
+    "@types/express": "^5.0.0"
+  }
+}

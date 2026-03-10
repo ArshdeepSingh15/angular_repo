@@ -1,0 +1,12 @@
+<h2>User Detail</h2>
+
+    @if (loading()) {
+      <p>Loading...</p>
+    }
+
+    @if (user()) {
+      <p><b>Name:</b> {{ user()?.name }}</p>
+      <p><b>Email:</b> {{ user()?.email }}</p>
+      <p><b>Phone:</b> {{ user()?.phone }}</p>
+      <p><b>Website:</b> {{ user()?.website }}</p>
+    }
